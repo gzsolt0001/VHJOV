@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-        xmlns:common="https://soap.api.nav.gov.hu/definitions/model/2.0/common/1.0"
+        xmlns:baseForm="https://soap.api.nav.gov.hu/definitions/model/2.0/baseForm/1.0"
         xmlns:enm1="https://soap.api.nav.gov.hu/definitions/model/2.0/altalanos_iranyitoszam"
         xmlns:meta="https://api.nav.gov.hu/definitions/form_xsd_metaschema/1.0"
-        xmlns:tns="https://soap.api.nav.gov.hu/definitions/model/2.0/VHJOV/12.0"
+        xmlns:tns="https://soap.api.nav.gov.hu/definitions/model/2.0/VHJOV/12.0.0"
         xmlns:xs="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        targetNamespace="https://soap.api.nav.gov.hu/definitions/model/2.0/VHJOV/12.0">
+        targetNamespace="https://soap.api.nav.gov.hu/definitions/model/2.0/VHJOV/12.0.0">
    <import namespace="https://api.nav.gov.hu/definitions/form_xsd_metaschema/1.0"
            schemaLocation="form_xsd_metaschema.xsd"/>
-   <import namespace="https://soap.api.nav.gov.hu/definitions/model/2.0/common/1.0"
-           schemaLocation="common.xsd"/>
+   <import namespace="https://soap.api.nav.gov.hu/definitions/model/2.0/baseForm/1.0"
+           schemaLocation="baseForm.xsd"/>
    <import namespace="https://soap.api.nav.gov.hu/definitions/model/2.0/altalanos_iranyitoszam"
            schemaLocation="altalanos_iranyitoszam.xsd"/>
    <element name="Doc_VHJOV"
@@ -45,7 +45,11 @@
          <documentation>Enum értékek </documentation>
       </annotation>
       <restriction base="xs:string">
-         <enumeration value="M"/>
+         <enumeration value="M">
+            <annotation>
+               <documentation>M=módosítás</documentation>
+            </annotation>
+         </enumeration>
       </restriction>
    </simpleType>
    <simpleType name="Enum_VHJOV_egyseges_kozterulet_jelleg_szekhely_1">
@@ -266,7 +270,7 @@
             </annotation>
          </element>
          <element name="Attachment_1"
-                  type="common:AttachmentType"
+                  type="baseForm:AttachmentType"
                   minOccurs="0"
                   maxOccurs="unbounded"
                   meta:metaType="AttachmentMetaType">
@@ -344,7 +348,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="80"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -378,7 +382,7 @@
                      <restriction base="string">
                         <minLength value="1"/>
                         <maxLength value="80"/>
-                        <pattern value="\P{C}+"/>
+                        <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                      </restriction>
                   </simpleType>
                </union>
@@ -394,7 +398,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="40"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -416,7 +420,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="15"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -430,7 +434,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="6"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -444,7 +448,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="6"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -458,7 +462,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="6"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -472,7 +476,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="6"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -486,7 +490,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="80"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -500,7 +504,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="20"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -543,7 +547,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="160"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -578,7 +582,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="80"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -612,7 +616,7 @@
                      <restriction base="string">
                         <minLength value="1"/>
                         <maxLength value="80"/>
-                        <pattern value="\P{C}+"/>
+                        <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                      </restriction>
                   </simpleType>
                </union>
@@ -628,7 +632,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="40"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -650,7 +654,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="15"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -664,7 +668,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="6"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -678,7 +682,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="6"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -692,7 +696,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="6"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -706,7 +710,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="6"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -793,7 +797,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="80"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -853,7 +857,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="160"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -907,7 +911,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="160"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>

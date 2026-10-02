@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Nyomtatvanyinfo xmlns="https://soap.api.nav.gov.hu/external/webnyk/nyomtatvanyinfo/1.0" version="12.0">
+<Nyomtatvanyinfo xmlns="https://soap.api.nav.gov.hu/external/webnyk/nyomtatvanyinfo/1.0" version="12.0.0">
     <BoritekParameter>
         <Kulcs>adoszam</Kulcs>
         <Ertek>//Block_120001/FieldGroup_120010/Field_0A0001C0001AA</Ertek>
